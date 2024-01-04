@@ -45,6 +45,14 @@
     return resultArray;
 
     }
+    static void PrintArray(string[] array)
+    {
+        foreach (string element in array)
+        {
+            Console.Write($"{element} ");
+        }
+        Console.WriteLine();
+    }
 }
 
         
