@@ -19,27 +19,27 @@ namespace Task_01
             PrintArray(newArray);
         }
 
-        // Исправлено: изменено название переменной maxLenght на maxLength
+        
         static string[] FilterStrings(string[] array, int maxLength)
         {
             int count = 0;
 
             for (int i = 0; i < array.Length; i++)
             {
-                // Исправлено: изменено название переменной maxLenght на maxLength
+                
                 if (array[i].Length <= maxLength)
                 {
                     count++;
                 }
             }
 
-            // Исправлено: изменено название переменной maxLenght на maxLength
+            
             string[] resultArray = new string[count];
 
             int index = 0;
             for (int i = 0; i < array.Length; i++)
             {
-                // Исправлено: изменено название переменной maxLenght на maxLength
+                
                 if (array[i].Length <= maxLength)
                 {
                     resultArray[index] = array[i];
