@@ -1,4 +1,6 @@
-﻿namespace Task_01
+﻿using System;
+
+namespace Task_01
 {
     public class Program
     {
@@ -9,49 +11,53 @@
             string[] originalArray = input.Split(' ');
 
             string[] newArray = FilterStrings(originalArray, 3);
-            
 
             Console.WriteLine("Исходный массив строк:");
             PrintArray(originalArray);
 
-            Console.WriteLine("\nНовый массив строк (длинан <= 3 символа):");
+            Console.WriteLine("\nНовый массив строк (длина <= 3 символа):");
             PrintArray(newArray);
         }
-    }
-    static string[] FilterStrings(string[] array, int maxLenght)
-    {
-        int count = 0;
 
-        for (int i = 0; i < arrayLength; i++)
+        // Исправлено: изменено название переменной maxLenght на maxLength
+        static string[] FilterStrings(string[] array, int maxLength)
         {
-            if (array[i].Length <= maxLenght)
+            int count = 0;
+
+            for (int i = 0; i < array.Length; i++)
             {
-                count++;
+                // Исправлено: изменено название переменной maxLenght на maxLength
+                if (array[i].Length <= maxLength)
+                {
+                    count++;
+                }
             }
-        }
-    
-    string[] resultArray = new string[count];
 
-    int index = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i].Length <= maxLenght)
+            // Исправлено: изменено название переменной maxLenght на maxLength
+            string[] resultArray = new string[count];
+
+            int index = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                // Исправлено: изменено название переменной maxLenght на maxLength
+                if (array[i].Length <= maxLength)
+                {
+                    resultArray[index] = array[i];
+                    index++;
+                }
+            }
+
+            return resultArray;
+        }
+
+        static void PrintArray(string[] array)
         {
-            resultArray[index] = array[i];
-            index++;
+            foreach (string element in array)
+            {
+                Console.Write($"{element} ");
+            }
+            Console.WriteLine();
         }
-    }
-
-    return resultArray;
-
-    }
-    static void PrintArray(string[] array)
-    {
-        foreach (string element in array)
-        {
-            Console.Write($"{element} ");
-        }
-        Console.WriteLine();
     }
 }
 
