@@ -32,7 +32,7 @@
     
     string[] resultArray = new string[count];
 
-    interface index = 0;
+    int index = 0;
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i].Length <= maxLenght)
