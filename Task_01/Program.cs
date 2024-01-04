@@ -18,6 +18,17 @@
             PrintArray(newArray);
         }
     }
-    
+    static string[] FilterStrings(string[] array, int maxLenght)
+    {
+        int count = 0;
+
+        for (int i = 0; i < arrayLength; i++)
+        {
+            if (array[i].Length <= maxLenght)
+            {
+                count++;
+            }
+        }
+    }
     
 }
